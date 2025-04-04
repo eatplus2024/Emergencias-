@@ -2,48 +2,34 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Números de Emergencia</title>
-    <link rel="stylesheet" href="emergencias.css">
+    <meta name="description" content="Listado de números de emergencia">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Números de Emergencia</h1>
-        <div class="emergencias-grid">
-            <div class="emergencia-item">
-                <span class="servicio">Policía:</span>
-                <span class="numero">112</span>
-                <div class="botones">
-                    <a href="tel:112" class="llamar-btn">Llamar</a>
-                    <button class="compartir-btn" data-numero="112">Compartir</button>
-                </div>
+        <header>
+            <h1>Números de Emergencia</h1>
+        </header>
+        
+        <main>
+            <div class="emergency-grid" id="emergency-contacts">
+                <!-- Emergency contacts will be inserted here by JavaScript -->
             </div>
-            <div class="emergencia-item">
-                <span class="servicio">Ambulancia:</span>
-                <span class="numero">911</span>
-                <div class="botones">
-                    <a href="tel:911" class="llamar-btn">Llamar</a>
-                    <button class="compartir-btn" data-numero="911">Compartir</button>
-                </div>
-            </div>
-            <div class="emergencia-item">
-                <span class="servicio">Bomberos:</span>
-                <span class="numero">100</span>
-                <div class="botones">
-                    <a href="tel:100" class="llamar-btn">Llamar</a>
-                    <button class="compartir-btn" data-numero="100">Compartir</button>
-                </div>
-            </div>
-            <div class="emergencia-item">
-                <span class="servicio">Protección Civil:</span>
-                <span class="numero">0800-000-0000</span>
-                <div class="botones">
-                    <a href="tel:08000000000" class="llamar-btn">Llamar</a>
-                    <button class="compartir-btn" data-numero="08000000000">Compartir</button>
-                </div>
-            </div>
-        </div>
+        </main>
+        
+        <footer>
+            <p>Mantén estos números a mano para situaciones de emergencia</p>
+        </footer>
     </div>
-    <script src="emergencias.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
