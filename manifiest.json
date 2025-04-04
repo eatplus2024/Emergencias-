@@ -1,150 +1,22 @@
-:root {
-  --primary-color: #f8f9fa;
-  --secondary-color: #e9ecef;
-  --text-color: #212529;
-  --accent-color: #0d6efd;
-  --success-color: #198754;
-  --border-color: #dee2e6;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Inter", sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--primary-color);
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
-.emergency-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-@media (min-width: 576px) {
-  .emergency-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 768px) {
-  .emergency-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px var(--shadow-color);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.card-header {
-  padding: 16px;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.card-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-.card-content {
-  padding: 16px;
-  flex-grow: 1;
-}
-
-.number {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.description {
-  font-size: 0.9rem;
-  color: #6c757d;
-}
-
-.card-footer {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid var(--border-color);
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.1s;
-  border: none;
-  font-size: 0.9rem;
-}
-
-.btn:active {
-  transform: translateY(1px);
-}
-
-.btn-call {
-  background-color: var(--success-color);
-  color: white;
-}
-
-.btn-call:hover {
-  background-color: #146c43;
-}
-
-.btn-share {
-  background-color: white;
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-}
-
-.btn-share:hover {
-  background-color: var(--secondary-color);
-}
-
-.icon {
-  margin-right: 8px;
-  width: 16px;
-  height: 16px;
-}
-
-footer {
-  margin-top: 30px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #6c757d;
+{
+  "name": "Números de Emergencia",
+  "short_name": "Emergencias",
+  "description": "Listado de números de emergencia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
 
