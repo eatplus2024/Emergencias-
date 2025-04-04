@@ -9,28 +9,40 @@
 <body>
     <div class="container">
         <h1>Números de Emergencia</h1>
-        <ul class="emergencias-list">
-            <li>
+        <div class="emergencias-grid">
+            <div class="emergencia-item">
                 <span class="servicio">Policía:</span>
-                <span class="numero">123</span>
-                <button class="llamar-btn" data-numero="112">Llamar</button>
-            </li>
-            <li>
-                <span class="servicio">Ambulancia:</span>
                 <span class="numero">112</span>
-                <button class="llamar-btn" data-numero="911">Llamar</button>
-            </li>
-            <li>
+                <div class="botones">
+                    <button class="llamar-btn" data-numero="112">Llamar</button>
+                    <button class="compartir-btn" data-numero="112">Compartir</button>
+                </div>
+            </div>
+            <div class="emergencia-item">
+                <span class="servicio">Ambulancia:</span>
+                <span class="numero">911</span>
+                <div class="botones">
+                    <button class="llamar-btn" data-numero="911">Llamar</button>
+                    <button class="compartir-btn" data-numero="911">Compartir</button>
+                </div>
+            </div>
+            <div class="emergencia-item">
                 <span class="servicio">Bomberos:</span>
-                <span class="numero">119</span>
-                <button class="llamar-btn" data-numero="100">Llamar</button>
-            </li>
-            <li>
+                <span class="numero">100</span>
+                <div class="botones">
+                    <button class="llamar-btn" data-numero="100">Llamar</button>
+                    <button class="compartir-btn" data-numero="100">Compartir</button>
+                </div>
+            </div>
+            <div class="emergencia-item">
                 <span class="servicio">Protección Civil:</span>
                 <span class="numero">0800-000-0000</span>
-                <button class="llamar-btn" data-numero="08000000000">Llamar</button>
-            </li>
-        </ul>
+                <div class="botones">
+                    <button class="llamar-btn" data-numero="08000000000">Llamar</button>
+                    <button class="compartir-btn" data-numero="08000000000">Compartir</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="emergencias.js"></script>
 </body>
