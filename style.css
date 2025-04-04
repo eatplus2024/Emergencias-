@@ -1,58 +1,150 @@
+:root {
+  --primary-color: #f8f9fa;
+  --secondary-color: #e9ecef;
+  --text-color: #212529;
+  --accent-color: #0d6efd;
+  --success-color: #198754;
+  --border-color: #dee2e6;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--primary-color);
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 h1 {
-    text-align: center;
-    color: #d9534f; /* Rojo */
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
-.emergencias-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+.emergency-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
 }
 
-.emergencia-item {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+@media (min-width: 576px) {
+  .emergency-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.servicio {
-    font-weight: bold;
-    color: #337ab7; /* Azul */
+@media (min-width: 768px) {
+  .emergency-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.numero {
-    color: #3c763d; /* Verde */
-    font-size: 1.2em;
-    margin-bottom: 10px;
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.botones {
-    display: flex;
-    justify-content: space-between;
+.card-header {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.llamar-btn, .compartir-btn {
-    background-color: #5cb85c; /* Verde */
-    color: white;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
-.llamar-btn {
-    text-decoration: none;
+.card-content {
+  padding: 16px;
+  flex-grow: 1;
 }
+
+.number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.card-footer {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-call {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-call:hover {
+  background-color: #146c43;
+}
+
+.btn-share {
+  background-color: white;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.btn-share:hover {
+  background-color: var(--secondary-color);
+}
+
+.icon {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
